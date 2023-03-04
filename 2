@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<conio.h>
+
+struct Duongthang
+{
+	float a, b, c;
+};
+ typedef struct Duongthang DUONGTHANG;
+ 
+ void nhapduongthang(DUONGTHANG);
+ void xuatduongthang(DUONGTHANG);
+ 
+ void nhapduongthang(DUONGTHANG dt)
+ {
+ 	float temp;
+ 	printf("\nNHap he so a: ");
+ 	scanf("%f", &temp);
+ 	dt.a=temp;
+
+ 	printf("\NNhap he so b: ");
+ 	scanf("%f", &temp);
+ 	dt.b = temp;
+ 	
+ 	printf("\nNhap he so c: ");
+ 	scanf("%f", &temp);
+ 	dt.c = temp;
+ 	 }
+ 	void xuatduongthang(DUONGTHANG dt)
+	 {
+ 		printf("%8.3fx + %8.3fy + %8.3f = 0", dt.a, dt.b, dt.c );
+ 		
+ 	} 
+ 	int main()
+ 	{
+ 	DUONGTHANG dt;
+ 	nhapduongthang(dt);
+ 	xuatduongthang(dt);
+ 	getch();
+ 	return 0;
+ 	}
