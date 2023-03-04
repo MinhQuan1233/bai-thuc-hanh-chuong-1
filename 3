@@ -1,0 +1,41 @@
+#include<conio.h>
+#include<stdio.h>
+
+struct hopsua 
+{
+	char nhanhieu[20];
+	float trongluong;
+    int hansd;
+};
+ typedef struct hopsua HOPSUA;
+ 
+ void nhaphopsua(HOPSUA);
+ void xuathopsua(HOPSUA);
+ 
+ void nhaphopsua(HOPSUA hs)
+ {
+ 	fflush(stdin);
+ 	printf("\nNhap nhan hieu: ");
+ 	gets(hs.nhanhieu);
+ 	
+ 	printf("\nNhap vao trong luong: ");
+ 	scanf("%f", &hs.trongluong);
+ 	
+ 	printf("\nNhap vao han su dung: ");
+ 	scanf("%d", &hs.hansd);
+ }
+  
+  void xuathopsua(HOPSUA hs)
+  {
+  	printf("Nhan hieu: %s\n ",hs.nhanhieu);
+  	printf("Trong luong: %f\n ",hs.trongluong);
+    printf("Han su dung: %d\n", hs.hansd);
+  }
+  int main()
+  {
+  HOPSUA hs;
+  nhaphopsua(hs);
+  xuathopsua(hs);
+  getch();
+  return 0;
+  }
